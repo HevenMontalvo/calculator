@@ -5,6 +5,7 @@ plugins {
 }
 
 apply plugin: "jacoco"
+apply plugin: 'checkstyle'
 
 group = 'com.heven'
 version = '0.0.1-SNAPSHOT'
