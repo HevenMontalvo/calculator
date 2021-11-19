@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.5.6'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+	id "org.sonarqube" version "3.3"
 }
 
 apply plugin: "jacoco"
@@ -32,4 +33,12 @@ jacocoTestCoverageVerification {
                }
           }
      }
+}
+
+sonarqube {
+    properties {
+        property "sonar.sourceEncoding", "UTF-8"
+				property "sonar.projectName", "analysis Calculator"
+				property "sonar.login", "7fbb817f937e1a4d72889e2252ec47f1bff76872"
+    }
 }
